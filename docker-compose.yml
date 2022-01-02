@@ -1,0 +1,21 @@
+    nginx:
+      build: ./nginx/
+      container_name: nginx
+      ports:
+        - 80:80  
+      links:
+        - php
+    php:
+      build: ./php
+      container_name: php-fpm
+      ports:
+        - 9000 
+      links: 
+        - mysql
+      volumes:
+        - ./www/html:/var/www/html/
+    mysql:
+      build: ./mysql
+      container_name: mysql
+      volumes:
+        - /var/lib/mysql
