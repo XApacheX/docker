@@ -4,9 +4,8 @@
      </head>  
 
      <body>  
-      <h1>Haaaaaaaaaaaaaaaaaaello World!</h1>
-            <p><?php echo 'We are running PHP, version: ' . phpversion(); ?></p>  
-      <?  
+      <h1>Hello World!<?php echo 'We are running PHP, version: ' . phpversion(); ?></h1>
+      <?php
        $database ="mydb";  
        $user = "root";  
        $password = "secret";  
@@ -19,7 +18,7 @@
         if (empty($tables)) {
           echo "<p>There are no tables in database \"{$database}\".</p>";
         } else {
-          echo "<p>Database \"{$database}\" has the following tables:</p>";
+          echo "<h2>Tables from \"{$database}\":</h2>";
           echo "<ul>";
             foreach ($tables as $table) {
               echo "<li>{$table}</li>";
