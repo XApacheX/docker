@@ -4,7 +4,8 @@
      </head>  
 
      <body>  
-      <h1>Hello World!<?php echo 'We are running PHP, version: ' . phpversion(); ?></h1>
+      <h1>Test Docker (php version: <?php phpversion(); ?></h1>
+          
       <?php
        $database ="mydb";  
        $user = "root";  
