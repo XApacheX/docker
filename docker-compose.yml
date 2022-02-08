@@ -13,7 +13,8 @@
       links: 
         - mysql
       volumes:
-        - ./www/html:/var/www/html/
+        - ./php/symfony:/var/www/html/
+          #entrypoint: ["bash","-c","install-composer.sh"]
     mysql:
       build: ./mysql
       container_name: mysql
